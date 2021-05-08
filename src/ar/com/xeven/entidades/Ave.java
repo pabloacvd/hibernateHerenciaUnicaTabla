@@ -9,8 +9,12 @@ public class Ave extends Animal{
 
     @Override
     public String toString() {
-        return super.toString()+"Ave{" +
-                "cantidadPlumas=" + cantidadPlumas +
+        return "Ave{" +
+                "idAnimal=" + idAnimal +
+                ", nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", color='" + color + '\'' +
+                ", cantidadPlumas=" + cantidadPlumas +
                 ", cantidadAlas=" + cantidadAlas +
                 '}';
     }

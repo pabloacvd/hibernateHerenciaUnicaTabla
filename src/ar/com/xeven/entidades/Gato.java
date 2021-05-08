@@ -1,5 +1,7 @@
 package ar.com.xeven.entidades;
 
+import ar.com.xeven.dao.GatoDAO;
+
 import javax.persistence.Entity;
 
 @Entity
@@ -17,8 +19,16 @@ public class Gato extends Animal{
 
     @Override
     public String toString() {
-        return super.getNombre()+"Gato{" +
-                "cantidadVidasRestantes=" + cantidadVidasRestantes +
+        return "Gato{" +
+                "idAnimal=" + idAnimal +
+                ", nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", color='" + color + '\'' +
+                ", cantidadVidasRestantes=" + cantidadVidasRestantes +
                 '}';
+    }
+
+    public void guardar() {
+        GatoDAO.guardar(this);
     }
 }

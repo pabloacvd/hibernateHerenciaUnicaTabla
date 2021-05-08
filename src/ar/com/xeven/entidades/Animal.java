@@ -7,12 +7,16 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Animal {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idAnimal;
-    private String nombre;
-    private int edad;
-    private String color;
+    protected int idAnimal;
+    protected String nombre;
+    protected int edad;
+    protected String color;
 
     public Animal() {
+    }
+
+    public void hacerAlgo(){
+        System.out.println("hola, estoy haciendo algo en animal");
     }
 
     @Override
